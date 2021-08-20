@@ -2,18 +2,19 @@ import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 
+import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
 import Box from "@material-ui/core/Box";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import { makeStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
+import { makeStyles } from "@material-ui/core/styles";
 
-import { add } from "../../features/todo/todosSlice";
+import { add, removeAll } from "../../features/todo/todosSlice";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -50,6 +51,10 @@ function TodoForm() {
     reset({});
     inputRef.current.focus();
   };
+
+  const handleDelete = () => {
+    dispatch(removeAll());
+  }
 
   const formatItem = (item) => {
     return { ...item, id: +new Date() };
@@ -89,15 +94,37 @@ function TodoForm() {
               label="Description"
               variant="outlined"
             />
-            <Button
-              className={classes.button}
-              variant="contained"
-              size="large"
-              color="primary"
-              type="submit"
+
+            <Grid
+              container
+              direction="row"
+              justifyContent="space-between"
+              alignItems="center"
             >
-              Add
-            </Button>
+              <Grid item>
+                <Button
+                  className={classes.button}
+                  variant="contained"
+                  size="large"
+                  color="primary"
+                  type="submit"
+                >
+                  Add
+                </Button>
+              </Grid>
+
+              <Grid item>
+                <Button
+                  className={classes.button}
+                  variant="contained"
+                  size="large"
+                  color="primary"
+                  onClick={handleDelete}
+                >
+                  Delete all
+                </Button>
+              </Grid>
+            </Grid>
           </form>
         </Box>
       </Card>

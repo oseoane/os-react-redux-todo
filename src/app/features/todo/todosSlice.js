@@ -13,11 +13,14 @@ export const slice = createSlice({
       state.items = [...state.items].filter(
         item => item.id !== action.payload
       );
+    },
+    removeAll: (state) => {
+      state.items = [];
     }
   },
 });
 
-export const { add, remove } = slice.actions;
+export const { add, remove, removeAll } = slice.actions;
 
 export const selectTodos = (state) => state.todos.items;
 
