@@ -10,6 +10,8 @@ import TodoForm from "../TodoForm/TodoForm";
 import Header from "../Header/Header";
 import TodoList from "../TodoList/TodoList";
 
+import { selectTodos } from '../../features/todo/todosSlice';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     overflow: "auto",
@@ -21,7 +23,7 @@ function Root() {
   const classes = useStyles();
   const [spacing, setSpacing] = useState(2);
 
-  const todos = useSelector((state) => state.todos.items);
+  const todos = useSelector(selectTodos);
 
   return (
     <div>

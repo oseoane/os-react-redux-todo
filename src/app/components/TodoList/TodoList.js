@@ -3,10 +3,12 @@ import Box from "@material-ui/core/Box";
 import TodoListItem from "../TodoListItem/TodoListItem";
 
 function TodoList(props) {
+  const todos = props.todos || [];
+
   return (
     <div>
       <Box my={4}>
-        {props.todos.map((item) => (
+        {todos.map((item) => (
           <TodoListItem key={item.id} item={item} />
         ))}
       </Box>
