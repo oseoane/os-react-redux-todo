@@ -9,7 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { makeStyles } from "@material-ui/core/styles";
 
-import { remove } from "../features/todo/todosSlice";
+import { remove } from "../../features/todo/todosSlice";
 
 const useStyles = makeStyles((theme) => ({
   root: {

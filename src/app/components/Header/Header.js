@@ -7,7 +7,7 @@ function TodoForm() {
     <AppBar position="fixed">
       <Toolbar>
         <Typography variant="h5" component="h1">
-          Todo list
+          To Do List
         </Typography>
       </Toolbar>
     </AppBar>

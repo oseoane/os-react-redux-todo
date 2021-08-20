@@ -6,9 +6,9 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { useSelector } from "react-redux";
 
-import TodoForm from "./TodoForm";
-import Header from "./Header";
-import TodoList from "./TodoList";
+import TodoForm from "../TodoForm/TodoForm";
+import Header from "../Header/Header";
+import TodoList from "../TodoList/TodoList";
 
 const useStyles = makeStyles((theme) => ({
   root: {

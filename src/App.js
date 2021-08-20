@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Root from "./app/components/Root";
+import Root from "./app/components/Root/Root";
 import { createTheme } from "@material-ui/core/styles";
 import blueGrey from "@material-ui/core/colors/blueGrey";
 import { ThemeProvider } from "@material-ui/styles";

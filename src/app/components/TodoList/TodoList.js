@@ -1,6 +1,6 @@
 import Box from "@material-ui/core/Box";
 
-import TodoListItem from "./TodoListItem";
+import TodoListItem from "../TodoListItem/TodoListItem";
 
 function TodoList(props) {
   return (
