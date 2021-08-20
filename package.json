@@ -1,5 +1,6 @@
 {
   "name": "os-react-redux-todo",
+  "description": "React & Redux 'to do' list testing app",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

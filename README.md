@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Redux Todo List
+
+Project for testing React and Redux with a "to do" list.
+
+Tags: React, Redux, Material UI.
+
+# Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
