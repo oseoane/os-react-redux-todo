@@ -2,7 +2,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 
-function TodoForm() {
+function Header() {
   return (
     <AppBar position="fixed">
       <Toolbar>
@@ -14,4 +14,4 @@ function TodoForm() {
   );
 }
 
-export default TodoForm;
+export default Header;
